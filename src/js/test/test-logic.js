@@ -1783,6 +1783,9 @@ export function finish(difficultyFailed = false) {
   } else if (Config.difficulty == "master") {
     testType += "<br>master";
   }
+  if (Config.layout) {
+    testType += `<br>${Config.layout}`;
+  }
 
   $("#result .stats .testType .bottom").html(testType);
 
