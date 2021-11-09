@@ -1786,6 +1786,9 @@ export function finish(difficultyFailed = false) {
   if (Config.layout) {
     testType += `<br>${Config.layout}`;
   }
+  if (Config.repeatWords !== "off") {
+    testType += `<br>repeat ${Config.repeatWords}`;
+  }
 
   $("#result .stats .testType .bottom").html(testType);
 
